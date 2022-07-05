@@ -1,0 +1,57 @@
+version: '3.4'
+
+services:
+  ess.billing.api:
+    image: ${DOCKER_REGISTRY-}essbilling
+    build:
+      context: .
+      dockerfile: ESS.Billing.API/Dockerfile
+
+  ess.catalog.api:
+    image: ${DOCKER_REGISTRY-}esscatalog
+    build:
+      context: .
+      dockerfile: ESS.Catalog.API/Dockerfile
+
+
+  ess.customers.api:
+    image: ${DOCKER_REGISTRY-}esscustomers
+    build:
+      context: .
+      dockerfile: ESS.Customers.API/Dockerfile
+
+
+  ess.order.api:
+    image: ${DOCKER_REGISTRY-}essorder
+    build:
+      context: .
+      dockerfile: ESS.Order.API/Dockerfile
+
+
+  ess.payments.api:
+    image: ${DOCKER_REGISTRY-}esspayments
+    build:
+      context: .
+      dockerfile: ESS.Payments.API/Dockerfile
+
+
+  ess.shipping.api:
+    image: ${DOCKER_REGISTRY-}essshipping
+    build:
+      context: .
+      dockerfile: ESS.Shipping.API/Dockerfile
+
+
+  ess.supplier.api:
+    image: ${DOCKER_REGISTRY-}esssupplier
+    build:
+      context: .
+      dockerfile: ESS.Supplier.API/Dockerfile
+
+
+  ess.users.api:
+    image: ${DOCKER_REGISTRY-}essusers
+    build:
+      context: .
+      dockerfile: ESS.Users.API/Dockerfile
+
